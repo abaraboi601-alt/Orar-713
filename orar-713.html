@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Orar grupa 713</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#faf7f5;--ink:#241f2b;--mute:#6d6677;--card:#fff;
+--amf:#d92d3a;--amfb:#fde6e8;--r108:#7c4dcc;--r108b:#ece4fa;--r109:#e8870e;--r109b:#fdeed8;--r110:#1f78d1;--r110b:#e0eefb;--spo:#1f9d62;--spob:#dcf3e8}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17141b;--ink:#f1edf5;--mute:#a79fb3;--card:#211d27;
+--amf:#ff5a67;--amfb:#3a1d22;--r108:#b08cf5;--r108b:#2c2340;--r109:#ffaa45;--r109b:#3a2b15;--r110:#5ba8f5;--r110b:#15293d;--spo:#4fd08f;--spob:#14301f}}
+:root[data-theme="dark"]{--bg:#17141b;--ink:#f1edf5;--mute:#a79fb3;--card:#211d27;
+--amf:#ff5a67;--amfb:#3a1d22;--r108:#b08cf5;--r108b:#2c2340;--r109:#ffaa45;--r109b:#3a2b15;--r110:#5ba8f5;--r110b:#15293d;--spo:#4fd08f;--spob:#14301f}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Nunito","Segoe UI",system-ui,sans-serif;line-height:1.35}
+main{max-width:560px;margin:0 auto;padding:20px 16px 40px}
+h1{font-size:1.7rem;margin:0 0 4px;font-weight:800}
+.sub{color:var(--mute);margin:0 0 16px;font-size:.95rem}
+.tabs{display:flex;gap:6px;background:var(--card);padding:5px;border-radius:14px;margin-bottom:14px}
+.tabs button{flex:1;border:0;background:none;color:var(--mute);font:inherit;font-weight:700;padding:10px;border-radius:10px;cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--ink);color:var(--bg)}
+.tabs button:focus-visible{outline:3px solid var(--r110);outline-offset:2px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;margin-bottom:18px;font-size:.85rem}
+.legend span{display:flex;align-items:center;gap:6px}
+.legend i{width:12px;height:12px;border-radius:4px;display:inline-block}
+h2{font-size:1.05rem;margin:22px 0 8px;font-weight:800}
+.row{display:flex;gap:12px;align-items:stretch;background:var(--bg2,var(--card));border-left:6px solid var(--c);border-radius:12px;padding:10px 12px;margin-bottom:8px}
+.t{min-width:84px;font-weight:800;font-size:.9rem;color:var(--c);font-variant-numeric:tabular-nums}
+.s{font-weight:700}
+.r{font-size:.85rem;color:var(--mute);margin-top:2px}
+.A{--c:var(--amf);--bg2:var(--amfb)}.R108{--c:var(--r108);--bg2:var(--r108b)}.R109{--c:var(--r109);--bg2:var(--r109b)}.R110{--c:var(--r110);--bg2:var(--r110b)}.S{--c:var(--spo);--bg2:var(--spob)}
+.A .r{color:var(--amf);font-weight:700}
+</style>
+</head>
+<body>
+<main>
+<h1>Orar grupa 713</h1>
+<p class="sub">Alege tipul de săptămână</p>
+<div class="tabs" role="tablist">
+<button role="tab" aria-selected="true" data-w="i">Săptămâna impară</button>
+<button role="tab" aria-selected="false" data-w="p">Săptămâna pară</button>
+</div>
+<div class="legend">
+<span><i style="background:var(--amf)"></i>Amf. 2 (curs, toate grupele)</span>
+<span><i style="background:var(--r108)"></i>Sala 108</span>
+<span><i style="background:var(--r109)"></i>Sala 109</span>
+<span><i style="background:var(--r110)"></i>Sala 110</span>
+<span><i style="background:var(--spo)"></i>Sport</span>
+</div>
+<div id="out"></div>
+</main>
+<script>
+var A="Amf. 2",SP="Baza Sportivă URA, Șos. Străulești 4-6";
+var D={
+i:[["Luni",[["11:30 - 12:50","Limba Engleză","110"],["13:30 - 14:50","Teoria Generală a Dreptului",A],["15:00 - 16:20","Istoria Dreptului Românesc",A]]],
+["Marți",[["11:30 - 12:50","Sociologie Juridică",A],["13:30 - 14:50","Drept Constituțional și Instituții Politice",A],["15:00 - 16:20","Teoria Generală a Dreptului","110"]]],
+["Miercuri",[["11:30 - 12:50","Drept Civil. Teoria Generală",A],["13:30 - 14:50","Drept Civil. Teorie Generală",A],["15:00 - 16:20","Drept Civil. Teorie Generală R","110"]]],
+["Joi",[["13:30 - 14:50","Filosofie",A]]],
+["Vineri",[["10:00 - 13:00","Sport",SP]]]],
+p:[["Luni",[["10:00 - 11:20","Drept Constituțional","108"],["11:30 - 12:50","Limba Engleză","110"],["13:30 - 14:50","Teoria Generală a Dreptului",A],["15:00 - 16:20","Istoria Dreptului Românesc",A]]],
+["Marți",[["10:00 - 11:20","Sociologie Jur.","108"],["11:30 - 12:50","Sociologie Juridică",A],["13:30 - 14:50","Drept Constituțional și Instituții Politice",A],["15:00 - 16:20","Teoria Generală a Dreptului","110"]]],
+["Miercuri",[["13:30 - 14:50","Drept Civil. Teorie Generală",A]]],
+["Joi",[["13:30 - 14:50","Filosofie",A],["15:00 - 16:20","Istoria Dreptului Românesc","109"]]],
+["Vineri",[["10:00 - 13:00","Sport",SP]]]]};
+function cls(r){return r===A?"A":r===SP?"S":"R"+r}
+function show(w){
+var h="";
+D[w].forEach(function(d){
+h+="<h2>"+d[0]+"</h2>";
+d[1].forEach(function(x){
+var room=(x[2]===A||x[2]===SP||isNaN(x[2]))?x[2]:"Sala "+x[2];
+h+='<div class="row '+cls(x[2])+'"><div class="t">'+x[0]+'</div><div><div class="s">'+x[1]+'</div><div class="r">'+room+'</div></div></div>';
+});});
+document.getElementById("out").innerHTML=h;
+document.querySelectorAll(".tabs button").forEach(function(b){b.setAttribute("aria-selected",b.dataset.w===w)});
+}
+document.querySelectorAll(".tabs button").forEach(function(b){b.onclick=function(){show(b.dataset.w)}});
+show("i");
+</script>
+</body>
+</html>
